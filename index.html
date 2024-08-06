@@ -1,39 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>  
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Encriptador de texto</title>
-    <link rel="stylesheet" href="}styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/imagenes/segurity_prueba.svg">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif&family=Space+Mono&display=swap"
+        rel="stylesheet"> 
 </head>
 <body>
-    <div class="container">
-        <div class="encriptar">
-            <textarea 
-            name="texto" 
-            class="texto" 
-            id="texto" 
-            cols="30" 
-            rows="10" 
-            placeholder="Ingresa el texto aqui"
-            ></textarea>
+    <header>
+        <div class="container__header">
+            <div class="header">
+                <a href="https://app.aluracursos.com/emprega-one/profile/diegollanosr" target="_blank"> 
+                    <img class="logo" src="/img/logo.png">
+                </a>
+            </div>  
         </div>
-        <div class="terminos">
-            <p>Solo letras minusculas y sin acentos</p>
+    </header>
+    <main>
+        <article class="container">
+            <section class="left" id="left">
+                <textarea class="inputtextarea" id="textoInput" placeholder="Ingrese el texto aquí" autofocus></textarea>
+                <div class="content_botones">
+                    <span class="info">
+                        <img src="./img/exclamacion.png" alt="advertencia" />
+                        Solo letras minúsculas y sin acentos
+                    </span>
+                    <div class="botones">
+                        <button id="button__encriptar" class="button__encriptar">Encriptar</button>
+                        <button id="button__desencriptar" class="button__desencriptar">Desencriptar</button>
+                    </div>
+                </div>
+            </section>
+            <section class="right" id="rigth">
+                <img id="munheco" class="munheco" src="./img/muñeco.png" alt="Ningún mensaje fue encontrado. Ingresa el texto que desees encriptar o desencriptar.">
+                <textarea id="textoFinal" class="textoFinal" placeholder="Ningún mensaje fue encontrado"></textarea>
+                <p id="textoInfo" class="info">Ingresa el texto que desees encriptar o desencriptar.</p>
+                <button class="button__copiar bn_ocultar" id="button__copiar">Copiar</button>
+            </section>
+        </article>
+    </main>
+    <footer class="footer ">
+        <p class="creador">Create by Maicol Andres Mora
+        </p>
+        <div>
+            <a href="https://github.com/moram98?tab=repositories" target="_blank">
+                <img class="links" src="./img/github.png" />
+            </a>
+            
+            <a href="https://www.linkedin.com/in/maicol-mora/" target="_blank">
+                <img class="links" src="./img/linkedin.png" />
+            </a>
         </div>
-        <div class="botones">
-            <button class="btn-encriptar" type="button" onclick="encriptar()">Encriptar</button>
-            <input type="button" class="btn-desencriptar" value="Desencriptar" onclick="desencriptar()">
-        </div>
-    </div>
-    <div class="encriptado">
-        <img src="" alt="" id="muñeco">
-        <div class="mensaje-encriptado" id="mensaje-encriptado">
-            <h2 id="titulo-mensaje">Ningun mensaje encontrado</h2>
-            <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
-            <textarea name="mensaje" id="mensaje" cols="30" rows="10" class="mensaje"></textarea>
-        </div>
-    </div>
+    </footer>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
-<script src="index.js"></script>
+
 </html>
